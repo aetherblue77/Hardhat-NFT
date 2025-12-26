@@ -1,6 +1,4 @@
-# Hardhat NFT Project 🖼️
-
-This repository contains the code for the **Hardhat NFT** module (Lesson 14) from the *Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript* course by Patrick Collins.
+# Hardhat NFT Project 💎
 
 The goal of this project is to explore different ways to create Non-Fungible Tokens (NFTs), ranging from simple ERC721 implementations to complex, randomized, and dynamic on-chain assets.
 
