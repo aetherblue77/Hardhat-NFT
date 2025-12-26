@@ -1,4 +1,4 @@
-# Hardhat NFT Project (Lesson 14) 🖼️
+# Hardhat NFT Project 🖼️
 
 This repository contains the code for the **Hardhat NFT** module (Lesson 14) from the *Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript* course by Patrick Collins.
 
