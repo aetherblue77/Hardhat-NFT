@@ -8,7 +8,7 @@ The goal of this project is to explore different ways to create Non-Fungible Tok
 | :--- | :---: | :--- |
 | **1. Basic NFT** | ✅ Completed | A standard ERC721 Token with static metadata. |
 | **2. Random IPFS NFT** | ✅ Completed | "Gacha" style NFT using Chainlink VRF & IPFS. |
-| **3. Dynamic SVG NFT** | 🚧 In Progress | NFTs that change based on on-chain data. |
+| **3. Dynamic SVG NFT** | ✅ Completed | 100% On-Chain NFT that reacts to ETH Price. |
 
 ---
 
@@ -30,6 +30,20 @@ This contract implements a **Provably Fair** NFT minting process using **Chainli
 - **Decentralized Storage:** Images and Metadata are stored on **IPFS** (InterPlanetary File System) using **Pinata** for pinning.
 - **Programmatic Upload:** The deploy script automatically uploads images and metadata to Pinata if they are not already pinned.
 
+## 📈 3. Dynamic SVG NFT
+This contract pushes the boundaries of ERC721 by storing metadata 100% On-Chain and making the NFT responsive to real-world data. It does not rely on external storage like IPFS or centralized servers.
+
+### Features:
+100% On-Chain Metadata: The SVG image data is converted into binary, Base64 encoded, and stored directly inside the Smart Contract. This ensures the NFT is permanent and immutable.
+
+Dynamic Appearance: The NFT changes its "mood" based on the real-time ETH/USD price.
+
+Chainlink Data Feeds: Integrates the Chainlink Aggregator V3 Interface to fetch decentralized price data.
+
+### Logic:
+If ETH Price ≥ Target Value: The NFT renders a Happy Face 😊.
+If ETH Price < Target Value: The NFT renders a Frown Face ☹️.
+
 ---
 
 ## 🛠️ Tech Stack & Tools
@@ -39,8 +53,10 @@ This contract implements a **Provably Fair** NFT minting process using **Chainli
 - **Ethers.js** - Blockchain Interaction
 - **OpenZeppelin** - Standard Contracts (ERC721, Ownable)
 - **Chainlink VRF** - On-chain Randomness
+- **Chainlink Data Feeds** - Real-world Asset Price Data
 - **IPFS & Pinata** - Decentralized Data Storage
 - **Mocha & Chai** - Unit Testing
+- **Base64** - On-chain Encoding
 
 ---
 

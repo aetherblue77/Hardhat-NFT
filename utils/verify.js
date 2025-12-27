@@ -13,6 +13,15 @@ const verify = async (contractAddress, args) => {
     } catch (e) {
         if (e.message.toLowerCase().includes("already verified")) {
             console.log("Already verified!")
+        } else if (e.message.toLowerCase().includes("deprecated v1 endpoint")) {
+            console.log("------------------------------------------------")
+            console.log(
+                "Warning: Automatic verification failed due to Etherscan V1 API deprecation.",
+            )
+            console.log(
+                "Your contract is deployed successfully! You can manually verify it on Etherscan.",
+            )
+            console.log("------------------------------------------------")
         } else {
             console.log(e)
         }
